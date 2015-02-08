@@ -26,8 +26,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func didClicked(sender: UIButton) {
-        var labelText = sender.titleLabel?.text
-
+        var labelText = sender.currentTitle
         switch labelText! {
         case "+","-","x","/" :
             self.oper = labelText!
