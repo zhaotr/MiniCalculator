@@ -26,13 +26,13 @@ class ViewController: UIViewController {
     }
 
     @IBAction func didClicked(sender: UIButton) {
-        var labelText = sender.currentTitle
+        let labelText = sender.currentTitle
         switch labelText! {
         case "+","-","x","/" :
             self.oper = labelText!
         case "=":
-            var oper1 = self.operand1.toInt();
-            var oper2 = self.operand2.toInt()
+            let oper1 = Int(self.operand1);
+            let oper2 = Int(self.operand2)
             var result = ""
             switch self.oper {
             case "+" :
@@ -44,7 +44,7 @@ class ViewController: UIViewController {
             case "/" :
                 result = "\(oper1!/oper2!)"
             default:
-                println("error")
+                print("error")
             }
             self.resultLabel.text = result
             self.operand1 = result
